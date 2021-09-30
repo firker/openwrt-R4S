@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: OpenWrt-lede5.4
+name: OpenWrt-lede r4s
 
 on:
   repository_dispatch:
@@ -17,19 +17,19 @@ on:
         required: false
         default: 'false'
   schedule:
-    - cron: 0 21 */3 * * 
+    - cron: 0 0 1 * * 
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 5.4.config
-  DIY_P1_SH: diy5.4.sh
-  DIY_P2_SH: diy-part2.sh
+  CONFIG_FILE: r4s.config
+  DIY_P1_SH: diy1.sh
+  DIY_P2_SH: diy2.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: true
+  UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
@@ -135,7 +135,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_5.4${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_r4s${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: 上传固件到NN网盘
@@ -173,7 +173,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} 「 openwrt5.4-pi-4b 」
+        name: ${{ env.FILE_TIME }} 「 openwrt-r4s」
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
@@ -192,7 +192,7 @@ jobs:
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         SCKEY: ${{ secrets.SERVERCHAN }}
-        text: 恭喜主人树莓派openwrt5.4固件编译成功！
+        text: 恭喜主人openwrt-r4s固件编译成功！
         desp: 我亲爱的主人您要编译的固件成功完成了！
               
               
