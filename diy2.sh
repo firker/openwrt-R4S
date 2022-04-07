@@ -18,14 +18,9 @@ sed -i "s/DISTRIB_DESCRIPTION='OpenWrt '/DISTRIB_DESCRIPTION='OpenWrt by L '/g" 
 # curl -fsSL  https://raw.githubusercontent.com/siropboy/other/master/patch/poweroff/system.lua > ./feeds/luci/modules/luci-mod-admin-full/luasrc/controller/admin/system.lua
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
-# rm -rf ./package/lean/dnsforwarder
 rm -rf ./package/lean/luci-theme-argon
 rm -rf ./feeds/packages/net/smartdns
-rm -rf ./feeds/packages/net/https-dns-proxy
-rm -rf ./feeds/diy/luci-app-vssr-plus
-rm -rf ./feeds/diy/vssr
-# rm -rf ./package/lean/v2ray
-# rm -rf ./package/lean/v2ray-plugin
+rm -rf ./feeds/packages/net/adguardhome
+rm -rf ./package/diy-ziyong/adguardhome
 # svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray package/lean/xray
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy feeds/packages/net/https-dns-proxy
 # svn co https://github.com/project-openwrt/openwrt/trunk/package/lean/dnsforwarder package/lean/dnsforwarder
