@@ -21,6 +21,6 @@ sed -i "s/DISTRIB_DESCRIPTION='OpenWrt '/DISTRIB_DESCRIPTION='OpenWrt by L '/g" 
 rm -rf ./package/lean/luci-theme-argon
 rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/packages/net/adguardhome
-rm -rf ./package/diy-ziyong/adguardhome
+# rm -rf ./package/diy-ziyong/adguardhome
 # svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray package/lean/xray
 # svn co https://github.com/project-openwrt/openwrt/trunk/package/lean/dnsforwarder package/lean/dnsforwarder
