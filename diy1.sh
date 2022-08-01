@@ -30,7 +30,7 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/yaof2/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
-svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci-app-store
+svn co https://github.com/linkease/istore.git package/istore
 sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
-svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
+svn co https://github.com/linkease/istore-ui.git package/istore-ui
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
