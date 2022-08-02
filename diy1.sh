@@ -31,6 +31,6 @@ git clone https://github.com/yaof2/luci-app-ikoolproxy.git package/luci-app-ikoo
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
 svn co https://github.com/linkease/istore.git package/istore
-sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
+sed -i 's/luci-lib-ipkg/luci-base/g' package/istore/luci/luci-app-store/Makefile
 svn co https://github.com/linkease/istore-ui.git package/istore-ui
 # svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
