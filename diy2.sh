@@ -23,6 +23,9 @@ rm -rf ./feeds/luci/themes/luci-theme-argon
 rm -rf ./feeds/luci/applications/luci-app-wrtbwmon
 rm -rf ./feeds/packages/net/smartdns
 rm -rf ./feeds/packages/net/adguardhome
+rm -r ./package/libs/openssl
+
+git clone https://github.com/firkerword/openssl.git package/libs/openssl
 # rm -rf ./package/diy-ziyong/adguardhome
 # svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray package/lean/xray
 # svn co https://github.com/project-openwrt/openwrt/trunk/package/lean/dnsforwarder package/lean/dnsforwarder
